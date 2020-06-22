@@ -135,6 +135,7 @@
       <DependentUpon>SymbolUserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\AssetViewModel.cs" />
+    <Compile Include="ViewModels\Balans.cs" />
     <Compile Include="ViewModels\BinanceSymbolViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\OrderViewModel.cs" />
