@@ -25,8 +25,8 @@
         </Grid.RowDefinitions>
 
         <TextBlock Padding="10 10 10 0">
-            <Run FontSize="18" FontWeight="Bold" Text="{Binding SelectedSymbol.Symbol }" ></Run>
-            <Run FontSize="14" Text="{Binding SelectedSymbol.Price, StringFormat={} {0:N8}}" ></Run>
+            <Run FontSize="22" Text="{Binding SelectedSymbol.Symbol }" ></Run>
+            <Run FontSize="22" Text="{Binding SelectedSymbol.Price, StringFormat={} {0:N2}}" ></Run>
         </TextBlock>
 
         <GroupBox Margin="5" Padding="5 0" Grid.Row="1">
