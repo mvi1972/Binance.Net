@@ -9,36 +9,36 @@ namespace Binance.Net.ClientWPF.ViewModels
 {
     class BalansViewModel : ObservableObject
     {
-        private string asset;
-        public string Asset
+        private string balans_ful;
+        public string Balans_ful
         {
-            get { return asset; }
+            get { return balans_ful; }
             set
             {
-                asset = value;
-                RaisePropertyChangedEvent("Asset");
+                balans_ful = value;
+                RaisePropertyChangedEvent("Balans_ful");
             }
         }
 
-        private decimal free;
-        public decimal Free
+        private decimal free_bal;
+        public decimal Free_bal
         {
-            get { return free; }
+            get { return free_bal; }
             set
             {
-                free = value;
-                RaisePropertyChangedEvent("Free");
+                free_bal = value;
+                RaisePropertyChangedEvent("Free_bal");
             }
         }
 
-        private decimal locked;
-        public decimal Locked
+        private decimal locked_bal;
+        public decimal Locked_bal
         {
-            get { return locked; }
+            get { return locked_bal; }
             set
             {
-                locked = value;
-                RaisePropertyChangedEvent("Locked");
+                locked_bal = value;
+                RaisePropertyChangedEvent("Locked_bal");
             }
         }
     }
