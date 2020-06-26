@@ -1,4 +1,9 @@
 ﻿using Binance.Net.ClientWPF.MVVM;
+using Binance.Net.Objects;
+using Binance.Net.ClientWPF.ViewModels;
+using Binance.Net.ClientWPF.UserControls;
+using Binance.Net.ClientWPF.MessageBox;
+using CryptoExchange.Net.Authentication;
 using System;
 using System.Collections.Generic;
 using System.Linq;
