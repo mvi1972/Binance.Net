@@ -1,0 +1,24 @@
+﻿
+    <UserControl x:Class="Test.ApplicationToolbar" 
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Height="Auto" Width="Auto">
+               
+    <UserControl.Resources>
+            <!-- Команда для обработки нажатий клавиш -->
+            <RoutedCommand x:Key="NavigationCommand" />
+        </UserControl.Resources>
+        <UserControl.CommandBindings>
+            <!-- Биндинг методов к команде -->
+            <CommandBinding Command="{StaticResource NavigationCommand}" 
+                            Executed="NavigationCommand_Executed" />
+        </UserControl.CommandBindings>
+        <ToolBar HorizontalAlignment="Left">
+            <!-- Навигация по страницам осуществляется при помощи обычных кнопок и команд -->
+            <Button CommandParameter="Page1.xaml" Command="{StaticResource NavigationCommand}">First Page</Button>
+            <Button CommandParameter="Page2.xaml" Command="{StaticResource NavigationCommand}">Second Page</Button>
+        </ToolBar>
+        
+        
+    </UserControl>
+    
+
