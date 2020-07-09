@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace ддя_тестов
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для glavnoeOkno.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class glavnoeOkno : Page
     {
-        public MainWindow()
+        public glavnoeOkno()
         {
             InitializeComponent();
         }
