@@ -6,10 +6,10 @@
       xmlns:local="clr-namespace:Test"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Page1">
+      Title="Page 1">
 
     <Grid>
-        <TextBlock HorizontalAlignment="Left" Margin="130,40,0,0" Text="Это первая страничка " TextWrapping="Wrap" VerticalAlignment="Top" Height="140" Width="300" FontSize="36"/>
+        <TextBlock HorizontalAlignment="Left"  Text="Это первая страничка " TextWrapping="Wrap" VerticalAlignment="Center" Height="140" Width="300" FontSize="36"/>
 
     </Grid>
 </Page>

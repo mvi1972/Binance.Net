@@ -6,10 +6,10 @@
       xmlns:local="clr-namespace:Test"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Page2">
+      WindowTitle="Page 2" >
 
     <Grid>
-        <Label Content="метка на странице 2" HorizontalAlignment="Left" Margin="315,0,0,0" VerticalAlignment="Center" Height="140" Width="370" FontSize="24"/>
+        <Label Content="метка на странице 2" HorizontalAlignment="Left" Margin="0,210,0,0" VerticalAlignment="Top" Height="140" Width="370" FontSize="24"/>
 
     </Grid>
 </Page>
