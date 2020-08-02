@@ -55,6 +55,6 @@
         <controls:SymbolUserControl 
             Grid.Column="1" Grid.Row="1" 
             Visibility="{Binding SymbolIsSelected, Converter={StaticResource BoolToVis}}">
-          </controls:SymbolUserControl>
+         </controls:SymbolUserControl>
     </Grid>
 </Window>
