@@ -17,44 +17,57 @@
             <BooleanToVisibilityConverter x:Key="BoolToVis" />
         </ResourceDictionary>
     </Window.Resources>
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="180"></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-        </Grid.ColumnDefinitions>
+    <DockPanel>
+        <Menu DockPanel.Dock="Top" >
+            <MenuItem Name="menuNastr" Header="Настройки">
+                <MenuItem x:Name="viborPar" Header="Выбери пару">
+                </MenuItem>
+            </MenuItem>
+            <Label Name="LabSelectAymbol" FontSize="22" Content="{Binding SelectedSymbol.Symbol}" />
+            <Label x:Name="LabSelSymPrice" FontSize="22" Content="{Binding SelectedSymbol.Price}" />
 
-        <Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
-        </Grid.RowDefinitions>
+        </Menu>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="30"></ColumnDefinition>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
 
-        <Button Grid.Column="1" 
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Button Grid.Column="2" 
                 HorizontalAlignment="Right" 
                 VerticalAlignment="Top" 
                 Width="32" Height="32" 
-                Margin="0 4 4 0" 
+                Margin="0,4,3.6,0" 
                 Background="Transparent" 
                 BorderThickness="0" 
                 Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}"
                 Command="{Binding SettingsCommand}">
-            <Image Source="{StaticResource Settings}"></Image>
-        </Button>
-        
-        <ListView Grid.Row="0" Grid.RowSpan="2" Margin="5" ItemsSource="{Binding AllPrices}" SelectedItem="{Binding SelectedSymbol}">
-            <ListView.View>
-                <GridView>
-                    <GridView.Columns>
-                        <GridViewColumn Width="60" Header="Name"
-                        DisplayMemberBinding="{Binding Symbol}"/>
-                        <GridViewColumn Width="100" Header="Price"
-                        DisplayMemberBinding="{Binding Price}"/>
-                    </GridView.Columns>
-                </GridView>
-            </ListView.View>
-        </ListView>
+                <Image Source="{StaticResource Settings}"></Image>
+            </Button>
 
-        <controls:SymbolUserControl 
-            Grid.Column="1" Grid.Row="1" 
-            Visibility="{Binding SymbolIsSelected, Converter={StaticResource BoolToVis}}">
-         </controls:SymbolUserControl>
-    </Grid>
+            <ListView Grid.Row="0" Margin="5,5,5,4.8" ItemsSource="{Binding AllPrices}" SelectedItem="{Binding SelectedSymbol}" Grid.ColumnSpan="2">
+                <ListView.View>
+                    <GridView>
+                        <GridView.Columns>
+                            <GridViewColumn Width="60" Header="Name"
+                        DisplayMemberBinding="{Binding Symbol}"/>
+                            <GridViewColumn Width="100" Header="Price"
+                        DisplayMemberBinding="{Binding Price}"/>
+                        </GridView.Columns>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+
+            <controls:SymbolUserControl 
+            Grid.Column="2" 
+            Visibility="{Binding SymbolIsSelected, Converter={StaticResource BoolToVis}}" Margin="0,0,-0.4,-0.2"/>
+        </Grid>
+
+    </DockPanel>
+
 </Window>

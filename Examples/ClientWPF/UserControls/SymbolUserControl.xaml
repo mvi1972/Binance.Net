@@ -195,12 +195,5 @@
                 </DataGrid.Columns>
             </DataGrid>
         </GroupBox>
-        <TextBlock
-            Grid.Column="1"
-            Margin="4,0,1,0"
-            Padding="10,10,10,0">
-            <Run FontSize="22" Text="{Binding SelectedSymbol.Symbol}" />
-            <Run FontSize="22" Text="{Binding Asset, UpdateSourceTrigger=PropertyChanged}" />
-        </TextBlock>
     </Grid>
 </UserControl>

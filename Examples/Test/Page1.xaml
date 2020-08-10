@@ -9,7 +9,7 @@
       Title="Page 1">
 
     <Grid>
-        <TextBlock HorizontalAlignment="Left"  Text="Это первая страничка " TextWrapping="Wrap" VerticalAlignment="Center" Height="140" Width="300" FontSize="36"/>
+        <TextBlock   Text="Это первая страничка " TextWrapping="Wrap" VerticalAlignment="Center" Height="140" Width="300" FontSize="36"/>
 
     </Grid>
 </Page>
